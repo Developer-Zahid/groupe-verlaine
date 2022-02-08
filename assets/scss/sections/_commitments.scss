@@ -1,0 +1,19 @@
+/* Commitments Section Style */
+.commitments{
+    &__card{
+        &__image{
+            max-height: toRem(105);
+        }
+        &__title{
+            font-size: toRem(24);
+            font-weight: 300;
+            margin-top: toRem(38);
+            &--sm{
+                font-size: toRem(18);
+            }
+        }
+        &__text{
+            line-height: 1.75;
+        }
+    }
+}

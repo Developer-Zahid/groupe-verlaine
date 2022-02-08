@@ -1,0 +1,25 @@
+/* Common Forms Style */
+.form{
+    &-label{
+        font-size: toRem(16);
+        font-weight: 500;
+    }
+    &-required{
+        vertical-align: super;
+    }
+    .invalid-feedback{
+        padding: 0 5px;
+        font-size: toRem(11);
+        &__icon{
+            max-width: toRem(12);
+            margin-right: 5px;
+        }
+    }
+}
+.is-invalid ~ .invalid-feedback,
+.is-invalid ~ .invalid-tooltip,
+.was-validated :invalid ~ .invalid-feedback,
+.was-validated :invalid ~ .invalid-tooltip{
+    display: inline-block;
+    width: auto;
+}

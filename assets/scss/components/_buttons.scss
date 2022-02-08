@@ -1,0 +1,38 @@
+/* Common Button's Style */
+.primary-btn,
+.scroll-top__btn{
+	color: $color-white;
+	line-height: initial;
+	@extend %transition;
+	&:hover,
+	&:focus,
+	&:focus-visible{
+		color: $color-white;
+	}
+}
+
+.primary-btn{
+	display: inline-block;
+	text-align: center;
+	font-size: 1rem;
+	font-family: $font-primary;
+	font-weight: 400;
+	padding: toEm(18) toEm(25);
+	border-radius: 5px;
+}
+
+.scroll-top{
+	bottom: 3%;
+	right: 1%;
+	display: none;
+	cursor: pointer;
+	z-index: 7;
+	@include mobile{
+		bottom: 2%;
+	}
+	&__btn{
+		width: 2.8rem;
+		height: 2.8rem;
+		font-size: 1.1rem;
+	}
+}

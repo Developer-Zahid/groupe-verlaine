@@ -1,0 +1,15 @@
+/* Sub-Banner Section Style */
+.sub-banner{
+    padding: toRem(50) 0;
+    @include min-tablet{
+        padding: toRem(80) 0;
+    }
+    &__title{
+        color: $color-white;
+        font-weight: 300;
+    }
+    &__text{
+        color: rgba($color-white, $alpha: 0.875);
+        font-size: toRem(18);
+    }
+}

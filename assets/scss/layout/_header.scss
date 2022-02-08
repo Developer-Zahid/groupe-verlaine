@@ -1,0 +1,121 @@
+/* Header Section Style */
+.header{
+	position: absolute;
+	top: 0;
+	@include min-desktop{
+		padding-top: toRem(15);
+		padding-bottom: toRem(15);
+	}
+	z-index: 9;
+	@extend %transition;
+	.container{
+		@include min-desktop-xl{
+			max-width: toRem(1742);
+		}
+	}
+	.navbar{
+		&-brand{
+			&__image{
+				max-height: toRem(50);
+			}
+		}
+		&-toggler{
+			z-index: 8;
+			@extend %transition;
+			@media only screen and (min-width: 700px) {
+				order: 3;
+			}
+			&__image{
+				&--show{
+					max-width: toRem(40);
+				}
+				&--hide{
+					display: none;
+					max-width: toRem(30);
+				}
+			}
+			&[aria-expanded="true"]{
+				.navbar-toggler__image{
+					&--show{
+						display: none;
+					}
+					&--hide{
+						display: block;
+					}
+				}
+			}
+		}
+		&-collapse{
+			@include desktop{
+				position: fixed;
+				top: 0;
+				left: 0;
+				transform: translateY(-100%);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 100vh;
+				background-color: $color-white;
+				transition: transform ease-in-out .3s;
+				&.show{
+					transform: translateY(0);
+				}
+				.navbar-nav{
+					width: 100%;
+					margin-top: toRem(20);
+					.nav-item{
+						margin: 0.3rem 0.6rem;
+					}
+				}
+			}
+		}
+		.nav{
+			&-link{
+				font-size: toRem(17);
+				font-weight: 400;
+				font-family: $font-primary;
+				padding-left: toRem(15);
+				padding-right: toRem(15);
+				transition: color .3s ease;
+			}
+		}
+		.primary-btn{
+			font-size: toRem(15);
+			padding-top: toRem(15);
+			padding-bottom: toRem(15);
+			@include min-desktop-lg{
+				padding-left: toRem(50);
+				padding-right: toRem(50);
+			}
+			@media only screen and (min-width: 700px) {
+				margin-left: auto;
+			}
+			@media only screen and (max-width: 699px) {
+				order: 3;
+				width: 100%;
+			}
+		}
+	}
+	&--fixed{
+		position: fixed;
+		transform: translateY(-100%);
+		box-shadow: 0 3px 18px rgba($color-black, $alpha: 0.05);
+		animation: header_in .4s linear forwards;
+		@include min-desktop{
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+}
+
+/* Fixed Header animation */
+@keyframes header_in{
+	0%{
+		transform: translateY(-100%);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}

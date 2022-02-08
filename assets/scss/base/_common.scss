@@ -1,0 +1,299 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+::selection{
+	color: $color-white;
+	background: $color-secondary;
+}
+
+html,
+body{
+	scroll-behavior: smooth;
+}
+
+html{
+	font-size: 16px;
+	text-size-adjust: none;
+}
+
+body {
+	color: rgba($color-secondary, $alpha: 0.75);
+	font-weight: 400;
+	font-family: $font-primary;
+	line-height: 1.75;
+}
+
+a,
+a:hover,
+a:focus,
+a:active{
+	color: inherit;
+	text-decoration: none;
+}
+
+button,
+button:hover,
+button:focus,
+button:active {
+	outline: none;
+}
+
+input:-webkit-autofill{
+	-webkit-text-fill-color: unset;
+	transition: background-color 5000s;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img{
+	object-fit: cover;
+}
+
+.user-select-none{
+	pointer-events: none;
+}
+
+.list-inline{
+	font-size: 0;
+	&-item{
+		font-size: 1rem;
+	}
+}
+
+/* Custom Container Style */
+.container{
+	@include min-desktop-lg{
+		max-width: 1330px;
+	}
+}
+
+.primary-color{
+	color: #e12523;
+}
+
+.primary-color--hover{
+	&:hover,
+	&:active,
+	&:focus,
+	&.active{
+		color: #e12523;
+	}
+}
+
+.primary-bg{
+	background-color: #e12523;
+}
+
+.primary-bg--hover{
+	&:hover,
+	&:active,
+	&:focus,
+	&.active{
+		background-color: #c11c1a;
+	}
+}
+
+.primary-border{
+	border-color: $color-primary;
+	&--bold{
+		border-width: 5px;
+	}
+	&--medium{
+		border-width: 2px;
+	}
+}
+
+.secondary-color{
+	color: #001d3b;
+}
+
+.secondary-color--hover{
+	&:hover,
+	&:focus,
+	&:active,
+	&.active{
+		color: #001d3b;
+	}
+}
+
+.secondary-bg{
+	background-color: #001d3b;
+}
+
+.secondary-bg--hover{
+	&:hover,
+	&:active,
+	&:focus,
+	&.active{
+		background-color: #15316b;
+	}
+}
+
+.section-bg{
+	background-color: $color-off-white;
+}
+
+/* Common Slick Style */
+.slick{
+	&__arrows{
+		top: 0;
+		position: absolute;
+		z-index: 3;
+		width: toRem(40);
+		height: toRem(40);
+		color: unset;
+		background-color: unset;
+		font-size: toRem(20);
+		text-align: center;
+		cursor: pointer;
+		@extend %transition;
+		&--left{
+			right: 0;
+		}
+		&--right{
+			right: 0;
+		}
+		&:hover,
+		&:focus-visible{
+			color: unset;
+			background-color: unset;
+		}
+	}
+	&-dots{
+		display: flex;
+		justify-content: center;
+		margin-top: toRem(15);
+		margin-bottom: 0;
+		line-height: 0;
+		li{
+			&:not(:last-child){
+				margin-right: 1rem;
+			}
+			button{
+				font-size: 0;
+				width: toRem(10);
+				height: toRem(10);
+				background: $color-primary;
+				border: 1px solid $color-primary;
+				border-radius: toRem(10);
+				@extend %transition;
+			}
+			&.slick-active{
+				button{
+					width: toRem(16);
+					background: transparent;
+				}
+			}
+		}
+	}
+}
+
+/* Veno Box Style */
+.vbox{
+	&-close{
+		top: 2%;
+		right: 2%;
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 3rem;
+		background: $color-primary !important;
+		color: $color-white !important;
+	}
+	&-preloader .sk{
+		&-child,
+		&-rect,
+		&-cube,
+		&-spinner,
+		&-rotating-plane{
+			background: $color-primary !important;
+		}
+	}
+	&-next,
+	&-prev{
+		width: 3rem;
+		height: 3rem;
+		span{
+			width: 2rem;
+			height: 2rem;
+			border-width: 4px;
+			border-top-color: $color-primary !important;
+			border-right-color: $color-primary !important;
+		}
+	}
+	&-overlay{
+		background-color: rgba(23, 23, 23, 0.98) !important;
+	}
+}
+
+/* Preloader Section Style */
+.preloader{
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+/* Common Section Gap Style */
+.section-gap{
+	padding: toRem(95) 0;
+	@include desktop{
+		padding: toRem(40) 0;
+	}
+	&--fix{
+		padding-bottom: calc(6rem - 30px);
+		@include desktop{
+			padding-bottom: calc(3rem - 30px);
+		}
+	}
+}
+
+/* Common Section Title Style */
+.section-title{
+	font-size: toRem(36);
+	font-weight: 400;
+	letter-spacing: .1rem;
+}
+
+.text-underline{
+	text-decoration: underline;
+}
+
+.unordered-list{
+	list-style: initial;
+	padding-left: toRem(20);
+	@include min-tablet{
+		padding-left: toRem(40);
+	}
+}
+
+.choose-us{
+	color: $color-white;
+	&__title{
+		font-weight: 300;
+	}
+	&__sub-title{
+		font-size: toRem(16);
+		font-weight: 700;
+		letter-spacing: .1rem;
+	}
+	&__text{
+		color: rgba($color-white, $alpha: 0.875);
+		@include min-tablet{
+            font-size: toRem(18);
+        }
+	}
+}

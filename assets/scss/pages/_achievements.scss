@@ -1,0 +1,28 @@
+/* Footer Form Section Style */
+.achievements{
+    &__title{
+        @include min-tablet{
+            font-size: toRem(48);
+            font-weight: 300;
+        }
+    }
+    &__text{
+        @include min-tablet{
+            font-size: toRem(18);
+        }
+    }
+    &__list{
+        @include tablet{
+            column-count: 2;
+        }
+        @include min-tablet{
+            column-count: 3;
+        }
+        column-gap: toRem(15);
+        &__item{
+            display: block;
+            break-inside: avoid;
+            padding-bottom: toRem(15);
+        }
+    }
+}

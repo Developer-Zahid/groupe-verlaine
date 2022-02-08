@@ -1,0 +1,68 @@
+/* Footer Section Style */
+.footer{
+    color: $color-white;
+    padding: toRem(85) 0 toRem(50);
+    &__block{
+        &__title{
+            font-size: toRem(16);
+            font-weight: 700;
+            line-height: 1.5;
+            letter-spacing: .1rem;
+            margin-bottom: toRem(20);
+        }
+        &__list{
+            &__item{
+                line-height: 1.75;
+            }
+            &__link{
+                font-size: toRem(14);
+                &:hover,
+                &:focus-visible{
+                    text-decoration: underline;
+                }
+                @include min-mobile{
+                    font-size: toRem(18);
+                }
+            }
+        }
+        &__social-list{
+            &__item{
+                margin: toRem(2);
+                &:first-child{
+                    margin-left: 0;
+                }
+            }
+            &__link{
+                padding: toRem(3) toRem(10);
+                @extend %transition;
+                &:first-child{
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    &__bottom__list{
+        &__link{
+            font-size: toRem(14);
+            &:hover,
+            &:focus-visible{
+                text-decoration: underline;
+            }
+        }
+    }
+    &__copyright{
+        @include mobile{
+            font-size: toRem(12);
+        }
+        @include min-mobile{
+            font-size: toRem(14);
+        }
+        &__link{
+            @extend %transition;
+            &:hover,
+            &:focus{
+                color: unset;
+            }
+        }
+    }
+}

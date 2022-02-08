@@ -1,0 +1,35 @@
+/* Banner Section Style */
+.banner{
+    padding: toRem(115) 0;
+    background: url("../images/banners/banner-1.jpg") no-repeat center / cover;
+    &__card{
+        padding: toRem(40) toRem(20);
+        background-color: $color-white;
+        box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.4);
+        border-radius: toRem(8);
+        @include min-tablet{
+            padding: toRem(40);
+        }
+        &__title{
+            font-size: toRem(28);
+            font-weight: 300;
+            margin-bottom: toRem(30);
+            @include min-tablet{
+                margin-top: toRem(20);
+            }
+            @include min-desktop-lg{
+                padding-left: toRem(35);
+            }
+        }
+        &__list{
+            &__item{
+                font-size: toRem(18);
+                line-height: 1.7;
+                &__icon{
+                    color: $color-success;
+                    margin-right: toRem(7);
+                }
+            }
+        }
+    }
+}

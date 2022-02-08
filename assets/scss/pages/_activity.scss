@@ -1,0 +1,16 @@
+/* Activities Section Style */
+.activities{
+    &__title{
+        font-weight: 300;
+    }
+    &__text{
+        @include min-tablet{
+            font-size: toRem(18);
+        }
+    }
+    .unordered-list__item{
+        @include min-tablet{
+            font-size: toRem(18);
+        }
+    }
+}
