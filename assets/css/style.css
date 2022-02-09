@@ -44,13 +44,15 @@ h5, .h5 {
   font-size: 0.75rem;
 }
 
-p {
-  font-size: 1rem;
-}
-
 @media (max-width: 575px) {
   p {
     font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 1.125rem;
   }
 }
 
@@ -166,6 +168,10 @@ img {
   border-color: #e12523;
 }
 
+.primary-border--gray {
+  border-color: rgba(0, 29, 59, 0.2);
+}
+
 .primary-border--bold {
   border-width: 5px;
 }
@@ -192,6 +198,10 @@ img {
 
 .section-bg {
   background-color: #f1f1f1;
+}
+
+.section-bg--secondary {
+  background-color: #DEE2E6;
 }
 
 /* Common Slick Style */
@@ -341,6 +351,16 @@ img {
   letter-spacing: .1rem;
 }
 
+.section-title--sm {
+  font-size: 1.75rem;
+}
+
+@media (min-width: 992px) {
+  .section-title--lg {
+    font-size: 3.75rem;
+  }
+}
+
 .text-underline {
   text-decoration: underline;
 }
@@ -352,6 +372,7 @@ img {
 
 @media (min-width: 768px) {
   .unordered-list {
+    font-size: 1.125rem;
     padding-left: 2.5rem;
   }
 }
@@ -435,6 +456,10 @@ img {
 }
 
 /* Common Forms Style */
+.form-text {
+  font-size: 1rem;
+}
+
 .form-label {
   font-size: 1rem;
   font-weight: 500;
@@ -805,6 +830,10 @@ img {
   margin-right: 0.4375rem;
 }
 
+.banner__form {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 /* Sub-Banner Section Style */
 .sub-banner {
   padding: 3.125rem 0;
@@ -842,7 +871,97 @@ img {
 }
 
 .commitments__card__text {
+  font-size: 1rem;
   line-height: 1.75;
+}
+
+/* Blogs Section Style */
+.blogs__card__header {
+  margin-bottom: 2.1875rem;
+}
+
+.blogs__card__image {
+  max-height: 14.6875rem;
+}
+
+.blogs__card__title {
+  letter-spacing: .1rem;
+}
+
+@media (min-width: 992px) {
+  .blogs__card__title {
+    font-size: 2.1875rem;
+  }
+}
+
+.blogs__card__title__link {
+  color: currentColor;
+}
+
+.blogs__card__title__link:hover, .blogs__card__title__link:active, .blogs__card__title__link:focus-visible {
+  text-decoration: underline;
+}
+
+/* Blogs Details Section Style */
+.blogs-details__card__header {
+  margin-bottom: 3.125rem;
+}
+
+.blogs-details__card__header__image {
+  max-height: 40.625rem;
+}
+
+.blogs-details__card__title, .blogs-details__card__sub-title {
+  letter-spacing: .1rem;
+}
+
+.blogs-details__card__title {
+  font-size: 2.625rem;
+}
+
+.blogs-details__card__sub-title {
+  font-size: 1.75rem;
+  margin-top: 3.75rem;
+  margin-bottom: 1.875rem;
+}
+
+@media (max-width: 575px) {
+  .blogs-details__card__sub-title {
+    font-size: 1.125rem;
+  }
+}
+
+.blogs-details__card__body__image {
+  margin: 0.9375rem 0;
+}
+
+.blogs-details__card__footer {
+  margin-top: 3.125rem;
+}
+
+.blogs-details__card__footer__title {
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.blogs-details__card__footer__list__item {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .blogs-details__card__footer__list__item {
+    margin-right: 1.5625rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .blogs-details__card__footer__list__item {
+    margin-right: 4.0625rem;
+  }
+}
+
+.blogs-details__card__footer__list__link {
+  padding: 5px;
 }
 
 /* Footer Form Section Style */
@@ -991,12 +1110,6 @@ img {
   }
 }
 
-@media (min-width: 768px) {
-  .activities .unordered-list__item {
-    font-size: 1.125rem;
-  }
-}
-
 /* Footer Form Section Style */
 @media (min-width: 768px) {
   .achievements__title {
@@ -1039,5 +1152,42 @@ img {
      page-break-inside: avoid;
           break-inside: avoid;
   padding-bottom: 0.9375rem;
+}
+
+/* About Section Style */
+@media (max-width: 1199px) {
+  .about__image img {
+    width: 100%;
+  }
+}
+
+/* Information Section Style */
+@media (min-width: 768px) {
+  .information__text {
+    font-size: 1.25rem;
+  }
+}
+
+.information__text strong {
+  letter-spacing: .1rem;
+}
+
+/* Contact Section Style */
+.contact__block {
+  margin-top: 2.8125rem;
+}
+
+.contact__block__title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contact__block__link:hover {
+  text-decoration: underline;
+}
+
+.contact .form-label {
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

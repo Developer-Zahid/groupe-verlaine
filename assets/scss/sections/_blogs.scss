@@ -1,0 +1,76 @@
+/* Blogs Section Style */
+.blogs{
+    &__card{
+        &__header{
+            margin-bottom: toRem(35);
+        }
+        &__image{
+            max-height: toRem(235);
+        }
+        &__title{
+            @include min-desktop{
+                font-size: toRem(35);
+            }
+            letter-spacing: .1rem;
+            &__link{
+                color: currentColor;
+                &:hover,
+                &:active,
+                &:focus-visible{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+/* Blogs Details Section Style */
+.blogs-details{
+    &__card{
+        &__header{
+            margin-bottom: toRem(50);
+            &__image{
+                max-height: toRem(650);
+            }
+        }
+        &__title,
+        &__sub-title{
+            letter-spacing: .1rem;
+        }
+        &__title{
+            font-size: toRem(42);
+        }
+        &__sub-title{
+            font-size: toRem(28);
+            margin-top: toRem(60);
+            margin-bottom: toRem(30);
+            @include mobile{
+                font-size: toRem(18);
+            }
+        }
+        &__body__image{
+            margin: toRem(15) 0;
+        }
+        &__footer{
+            margin-top: toRem(50);
+            &__title{
+                font-weight: 400;
+                margin-top: 5px;
+            }
+            &__list{
+                &__item{
+                    margin-bottom: toRem(8);
+                    @include min-tablet{
+                        margin-right: toRem(25);
+                    }
+                    @include min-desktop{
+                        margin-right: toRem(65);
+                    }
+                }
+                &__link{
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}

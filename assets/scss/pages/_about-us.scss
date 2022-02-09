@@ -1,0 +1,20 @@
+/* About Section Style */
+.about{
+    &__image img{
+        @include desktop-lg{
+          width: 100%;
+        }
+    }
+}
+
+/* Information Section Style */
+.information{
+    &__text{
+        @include min-tablet{
+            font-size: toRem(20);
+        }
+        strong{
+            letter-spacing: .1rem;
+        }
+    }
+}

@@ -105,6 +105,9 @@ img{
 
 .primary-border{
 	border-color: $color-primary;
+	&--gray{
+		border-color: rgba(0,29,59,0.2);
+	}
 	&--bold{
 		border-width: 5px;
 	}
@@ -141,6 +144,9 @@ img{
 
 .section-bg{
 	background-color: $color-off-white;
+	&--secondary{
+		background-color: #DEE2E6;
+	}
 }
 
 /* Common Slick Style */
@@ -266,6 +272,14 @@ img{
 	font-size: toRem(36);
 	font-weight: 400;
 	letter-spacing: .1rem;
+	&--sm{
+		font-size: toRem(28);
+	}
+	&--lg{
+		@include min-desktop{
+			font-size: toRem(60);
+		}
+	}
 }
 
 .text-underline{
@@ -276,6 +290,7 @@ img{
 	list-style: initial;
 	padding-left: toRem(20);
 	@include min-tablet{
+		font-size: toRem(18);
 		padding-left: toRem(40);
 	}
 }

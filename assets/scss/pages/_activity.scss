@@ -8,9 +8,4 @@
             font-size: toRem(18);
         }
     }
-    .unordered-list__item{
-        @include min-tablet{
-            font-size: toRem(18);
-        }
-    }
 }

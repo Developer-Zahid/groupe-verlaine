@@ -1,5 +1,8 @@
 /* Common Forms Style */
 .form{
+    &-text{
+        font-size: toRem(16);
+    }
     &-label{
         font-size: toRem(16);
         font-weight: 500;

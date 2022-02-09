@@ -37,8 +37,10 @@ h5,.h5{
     font-size: toRem(12);
 }
 p{
-    font-size: toRem(16);
     @include mobile{
         font-size: toRem(14);
+    }
+    @include min-tablet{
+        font-size: toRem(18);
     }
 }

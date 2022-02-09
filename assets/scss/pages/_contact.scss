@@ -1,0 +1,21 @@
+/* Contact Section Style */
+.contact{
+    &__block{
+        margin-top: toRem(45);
+        &__title{
+            font-size: toRem(16);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        &__link{
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .form{
+        &-label{
+            color: $color-white;
+        }
+    }
+}
