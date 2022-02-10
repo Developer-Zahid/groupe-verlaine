@@ -3,7 +3,7 @@
 
 	/* Document on load functions */
 	$(window).on('load', function () {
-        // preLoader();
+        preLoader();
 		headerHeightFixer();
     });
 	/* Document on Resize functions */
@@ -13,7 +13,7 @@
 
 	/* Preloader init */
 	function preLoader(){
-		$(".preloader").delay(1000).fadeOut("slow");
+		$(".preloader").delay(500).fadeOut("slow");
 	}
 
 	/* Bootstrap form validation init */
@@ -74,17 +74,24 @@
 		}else{
 			$(".navbar-collapse").collapse("hide");
 			$("html").removeClass("overflow-hidden");
-			$('.offCanvasMenuCloser').removeClass('show');
 		}
 	});
 	$('.navbar-toggler').on('click', function () {
         $("html").toggleClass('overflow-hidden');
-        $('.offCanvasMenuCloser').toggleClass('show');
     });
-    $('.offCanvasMenuCloser').on('click', function () {
-        $(this).removeClass('show');
-        $("html").removeClass("overflow-hidden");
-    });
+
+	/* Custom Input Placeholder Change function */
+	(function(){
+		$('input[type="tel"]').on("mouseenter keydown focus", function(){
+			$(this).attr("placeholder", "__ __ __ __ __")
+		});
+		$('input[type="tel"]').on("mouseout blur", function(){
+			if(!$(this).is(":focus")){
+				$(this).attr("placeholder", "00 00 00 00 00")
+			}
+		});
+	})();
+
 
 	/* Set Current Year function */
 	(function(){
@@ -130,5 +137,11 @@
         bgcolor: '#222222',
         spinner: 'three-bounce',
     });
+
+	/* AOS Animation */
+	AOS.init({
+		duration: 1000,
+		once: true,
+	});
 
 })(jQuery);

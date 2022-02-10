@@ -5,10 +5,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Site Meta Data -->
     <meta name="author" content="Groupe Verlaine">
-    <meta name="description" content="Entreprise spécialisée dans l'isolation thermique des murs par l'extérieur. Certifiés RGE, nous intervenons dans toute la France pour isoler et ravaler vos façades. ">
+    <meta name="description" content="Entreprise spécialisée dans l'isolation thermique des murs par l'extérieur. Certifiés RGE, nous intervenons dans toute la France pour isoler et ravaler vos façades.">
     <meta name="keywords" content="amg facades ravalement devis aide isolation anah">
 	<!-- Site Title -->
 	<title>Groupe Verlaine - Isolation par l'extérieur</title>
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://groupeverlaine.com/">
+	<meta property="og:title" content="Groupe Verlaine - Isolation par l'extérieur">
+	<meta property="og:description" content="Entreprise spécialisée dans l'isolation thermique des murs par l'extérieur. Certifiés RGE, nous intervenons dans toute la France pour isoler et ravaler vos façades. ">
+	<meta property="og:image" content="./assets/images/og-image/og-image.png">
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://groupeverlaine.com/">
+	<meta property="twitter:title" content="Groupe Verlaine - Isolation par l'extérieur">
+	<meta property="twitter:description" content="Entreprise spécialisée dans l'isolation thermique des murs par l'extérieur. Certifiés RGE, nous intervenons dans toute la France pour isoler et ravaler vos façades. ">
+	<meta property="twitter:image" content="./assets/images/og-image/og-image.png">
 	<!-- Favicon Link -->
 	<link rel="icon" type="image/png" sizes="512x512" href="./assets/images/favicon/android-chrome-512x512.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="./assets/images/favicon/android-chrome-192x192.png">
@@ -19,9 +31,17 @@
 	<!-- All CSS -->
 	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./assets/plugins/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="./assets/plugins/aos/css/aos.css">
 	<link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 <body>
+	<!-- Preloader Section -->
+	<div class="preloader position-fixed bg-white w-100 h-100">
+		<div class="preloader__wrapper d-flex align-items-center justify-content-center w-100 h-100">
+			<img src="./assets/images/logos/logo.png" alt="logo" class="preloader__image user-select-none">
+		</div>
+	</div>
+
 	<!-- Header Section -->
 	<header class="header bg-white w-100">
 		<nav class="navbar navbar-expand-lg">
@@ -59,7 +79,7 @@
 	<section class="banner">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-lg-6">
+				<div class="col-xl-6 col-lg-6 mb-4 mb-lg-0">
 					<div class="banner__card">
 						<h1 class="banner__card__title text-center text-md-left">Expert de l'Isolation par l'Extérieur</h1>
 						<ul class="banner__card__list secondary-color">
@@ -85,26 +105,42 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-5 ofset-lg-1">
-					<form action="#!" class="banner__form form p-4 needs-validation" novalidate>
+				<div class="col-xl-5 col-lg-6">
+					<form action="#!" class="banner__form form p-4 pt-5 needs-validation ml-xl-4" novalidate>
 						<div class="text-center mb-4">
 							<h2 class="form-title mb-1">Contactez-nous !</h2>
-							<p class="form-text">Nous vous rappelons dans les plus brefs délais</p>
+							<p class="form-text primary-color">Nous vous rappelons dans les plus brefs délais</p>
 						</div>
-						<div class="form-group">
-							<label for="fname" class="form-label d-block">Prénom Nom <span class="form-required text-danger">*</span></label>
-							<div class="row">
-								<div class="col-md-6 mb-3 mb-md-0">
-									<input type="text" name="fname" id="fname" class="form-control" placeholder="Prénom" required>
-									<div class="invalid-feedback bg-danger text-white rounded">
-										<div class="d-flex align-items-center">
-											<img src="./assets/images/icons/invalid.png" alt="invalid" class="invalid-feedback__icon w-100">
-											Ce champ est obligatoire.
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="fname" class="form-label secondary-color d-block">Prénom et nom <span class="form-required text-danger">*</span></label>
+									<div class="form-row">
+										<div class="col-md-6 mb-3 mb-md-0">
+											<input type="text" name="fname" id="fname" class="form-control" placeholder="Prénom" required>
+											<div class="invalid-feedback bg-danger text-white rounded">
+												<div class="d-flex flex-wrap align-items-center">
+													<img src="./assets/images/icons/invalid.png" alt="invalid" class="invalid-feedback__icon w-100">
+													Ce champ est obligatoire.
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<input type="text" name="lname" id="lname" class="form-control" placeholder="Nom" required>
+											<div class="invalid-feedback bg-danger text-white rounded">
+												<div class="d-flex flex-wrap align-items-center">
+													<img src="./assets/images/icons/invalid.png" alt="invalid" class="invalid-feedback__icon w-100">
+													Ce champ est obligatoire.
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-md-6">
-									<input type="text" name="lname" id="lname" class="form-control" placeholder="Nom" required>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="email" class="form-label secondary-color d-block">E-mail <span class="form-required text-danger">*</span></label>
+									<input type="email" name="email" id="email" class="form-control" required>
 									<div class="invalid-feedback bg-danger text-white rounded">
 										<div class="d-flex align-items-center">
 											<img src="./assets/images/icons/invalid.png" alt="invalid" class="invalid-feedback__icon w-100">
@@ -117,33 +153,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<label for="email" class="form-label d-block">E-mail <span class="form-required text-danger">*</span></label>
-									<input type="email" name="email" id="email" class="form-control" placeholder="votremail@email.com" required>
-									<div class="invalid-feedback bg-danger text-white rounded">
-										<div class="d-flex align-items-center">
-											<img src="./assets/images/icons/invalid.png" alt="invalid" class="invalid-feedback__icon w-100">
-											Ce champ est obligatoire.
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="phone" class="form-label d-block">Téléphone <span class="form-required text-danger">*</span></label>
-									<input type="tel" name="phone" id="phone" class="form-control" placeholder="00 00 00 00 00" required>
-									<div class="invalid-feedback bg-danger text-white rounded">
-										<div class="d-flex align-items-center">
-											<img src="./assets/images/icons/invalid.png" alt="invalid" class="invalid-feedback__icon w-100">
-											Ce champ est obligatoire.
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="phone" class="form-label d-block">Téléphone <span class="form-required text-danger">*</span></label>
+									<label for="phone" class="form-label secondary-color d-block">Téléphone <span class="form-required text-danger">*</span></label>
 									<input type="tel" name="phone" id="phone" class="form-control" placeholder="00 00 00 00 00" required>
 									<div class="invalid-feedback bg-danger text-white rounded">
 										<div class="d-flex align-items-center">
@@ -155,13 +165,13 @@
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<label for="postal" class="form-label d-block">Code postal <span class="form-required">*</span></label>
+									<label for="postal" class="form-label secondary-color d-block">Code postal <span class="form-required color-transparent">*</span></label>
 									<input type="number" name="postal" id="postal" class="form-control">
 								</div>
 							</div>
 						</div>
 						<div class="text-center mt-3">
-							<button type="submit" class="primary-btn primary-bg primary-bg--hover font-weight-bold border-0">Envoyer</button>
+							<button type="submit" class="primary-btn primary-bg primary-bg--hover border-0">Envoyer ma demande</button>
 						</div>
 					</form>
 				</div>
@@ -173,25 +183,25 @@
 	<section class="commitments section-gap">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-0">
+				<div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-0" data-aos="fade-up">
 					<figure class="commitments__card text-center">
 						<img src="./assets/images/icons/icon-1.jpg" alt="commitments icon" class="commitments__card__image img-fluid user-select-none">
 						<h3 class="commitments__card__title commitments__card__title--sm secondary-color">Estimation gratuite</h3>
 					</figure>
 				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-0">
+				<div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
 					<figure class="commitments__card text-center">
 						<img src="./assets/images/icons/icon-2.jpg" alt="commitments icon" class="commitments__card__image img-fluid user-select-none">
 						<h3 class="commitments__card__title commitments__card__title--sm secondary-color">Équipes en interne</h3>
 					</figure>
 				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-0">
+				<div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
 					<figure class="commitments__card text-center">
 						<img src="./assets/images/icons/icon-3.jpg" alt="commitments icon" class="commitments__card__image img-fluid user-select-none">
 						<h3 class="commitments__card__title commitments__card__title--sm secondary-color">Service administratif</h3>
 					</figure>
 				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-0">
+				<div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
 					<figure class="commitments__card text-center">
 						<img src="./assets/images/icons/icon-4.jpg" alt="commitments icon" class="commitments__card__image img-fluid user-select-none">
 						<h3 class="commitments__card__title commitments__card__title--sm secondary-color">Savoir-faire reconnu</h3>
@@ -207,7 +217,7 @@
 	<!-- Works Section -->
 	<section class="works section-gap">
 		<div class="container">
-			<div class="row">
+			<div class="row" data-aos="fade-down">
 				<div class="col-xl-6 mb-3 mb-xl-0">
 					<div class="works__image works__image--top overflow-hidden pr-xl-4">
 						<img src="./assets/images/works/work-1.jpg" alt="work image" class="w-100 user-select-none">
@@ -221,16 +231,16 @@
 						<li class="works__list__item">➞ Un pôle production pour toutes les interventions liées au terrain</li>
 						<li class="works__list__item">➞ Un pôle administratif pour monter les dossiers liées aux subventions</li>
 					</ul>
-					<p class="works__text">Vous avez un immeuble à faire isoler et ravaler ? <a href="#!" class="text-underline">Contactez-nous via ce formulaire</a></p>
+					<p class="works__text">Vous avez un immeuble à faire isoler et ravaler ? <a href="./real-estate.html" class="text-underline">Contactez-nous via ce formulaire</a></p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="works__btn-wrapper col-12 d-flex flex-wrap justify-content-around">
+				<div class="works__btn-wrapper col-12 d-flex flex-wrap justify-content-around" data-aos="zoom-in">
 					<a href="https://www.dropbox.com/s/fq3ykmsxurh61rw/Brochure_AMG_complete.pdf?dl=0" target="_blank" class="primary-btn rounded-pill secondary-bg secondary-bg--hover m-1 m-md-0">Télécharger la brochure</a>
 					<a href="contact.html" class="primary-btn rounded-pill primary-bg primary-bg--hover m-1 m-md-0">Faites estimer votre devis</a>
 				</div>
 			</div>
-			<div class="row flex-lg-row-reverse">
+			<div class="row flex-lg-row-reverse" data-aos="fade-up">
 				<div class="col-xl-6 mb-3 mb-xl-0">
 					<div class="works__image works__image--bottom overflow-hidden">
 						<img src="./assets/images/works/work-2.jpeg" alt="work image" class="w-100 user-select-none">
@@ -240,7 +250,7 @@
 					<div class="pr-xl-4">
 						<h1 class="section-title text-xl-right secondary-color mt-xl-3">Les <span class="primary-color">travaux</span> de nos équipes</h1>
 						<p class="works__text mt-4">Grâce à une gestion et une coordination maîtrisée, nous intervenons dans toute la France métropolitaine. Plusieurs centaines de clients nous ont déjà fait confiance pour une isolation durable et de qualité. Avec les subventions MaPrimeRénov' et Certificats d'Économies d'Énergie, nos clients ont pu profiter des bienfaits de l'isolation des murs par l'extérieur.</p>
-						<p class="works__text"><a href="#!" class="text-underline">Voir les réalisations de nos équipes</a></p>
+						<p class="works__text"><a href="./blogs.html" class="text-underline">Voir les réalisations de nos équipes</a></p>
 					</div>
 				</div>
 			</div>
@@ -254,7 +264,7 @@
 				<div class="col-12 text-center">
 					<h1 class="section-title secondary-color">Une expertise <span class="primary-color">RGE</span> reconnue</h1>
 				</div>
-				<div class="col-lg-6 mt-5">
+				<div class="col-lg-6 mt-5" data-aos="fade-up">
 					<div class="reviews__card">
 						<div class="reviews__card__header d-flex flex-wrap mb-2">
 							<div class="reviews__card__avatar reviews__card__avatar--orange text-uppercase d-flex align-items-center justify-content-center rounded-pill">
@@ -274,7 +284,7 @@
 						<p class="reviews__card__text font-italic">Nickel, rien à dire, tout est fait a la main, donc qualité meilleure qu'en projection. Je recommande vivement cette société.</p>
 					</div>
 				</div>
-				<div class="col-lg-6 mt-5">
+				<div class="col-lg-6 mt-5" data-aos="fade-up" data-aos-delay="100">
 					<div class="reviews__card">
 						<div class="reviews__card__header d-flex flex-wrap mb-2">
 							<div class="reviews__card__avatar reviews__card__avatar--pest text-uppercase d-flex align-items-center justify-content-center rounded-pill">V</div>
@@ -292,7 +302,7 @@
 						<p class="reviews__card__text font-italic">Société très professionnelle et très réactive. Bon accompagnement pour l'administratif et bon suivi du dossier. Je recommande AMG FACADES GROUPE VERLAINE</p>
 					</div>
 				</div>
-				<div class="col-lg-6 mt-5">
+				<div class="col-lg-6 mt-5" data-aos="fade-up">
 					<div class="reviews__card">
 						<div class="reviews__card__header d-flex flex-wrap mb-2">
 							<div class="reviews__card__avatar reviews__card__avatar--purple text-uppercase d-flex align-items-center justify-content-center rounded-pill">C</div>
@@ -310,7 +320,7 @@
 						<p class="reviews__card__text font-italic">Groupe très professionnel qui m'a accompagnée et guidée dans toutes les démarches. Quant à l'équipe sur place je suis impressionnée par leur travail de très haute qualité ! Merci à chacun d'entre eux pour cette belle expérience !</p>
 					</div>
 				</div>
-				<div class="col-lg-6 mt-5">
+				<div class="col-lg-6 mt-5" data-aos="fade-up" data-aos-delay="100">
 					<div class="reviews__card">
 						<div class="reviews__card__header d-flex flex-wrap mb-2">
 							<div class="reviews__card__avatar reviews__card__avatar--green text-uppercase d-flex align-items-center justify-content-center rounded-pill">E</div>
@@ -339,22 +349,22 @@
 	<section class="clients section-gap">
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
-				<div class="col-lg-3 col-md-4 col-sm-6 mt-4 mt-lg-0">
+				<div class="col-lg-3 col-md-4 col-sm-6 mt-4 mt-lg-0" data-aos="zoom-in">
 					<figure class="clients__card text-center mb-0">
 						<img src="./assets/images/clients/client-1.jpg" alt="clients logo" class="clients__card__image user-select-none img-fluid">
 					</figure>
 				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 mt-4 mt-lg-0">
+				<div class="col-lg-3 col-md-4 col-sm-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="100">
 					<figure class="clients__card text-center mb-0">
 						<img src="./assets/images/clients/client-2.jpg" alt="clients logo" class="clients__card__image user-select-none img-fluid">
 					</figure>
 				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 mt-4 mt-lg-0">
+				<div class="col-lg-3 col-md-4 col-sm-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
 					<figure class="clients__card text-center mb-0">
 						<img src="./assets/images/clients/client-3.jpg" alt="clients logo" class="clients__card__image user-select-none img-fluid">
 					</figure>
 				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 mt-4 mt-lg-0">
+				<div class="col-lg-3 col-md-4 col-sm-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
 					<figure class="clients__card text-center mb-0">
 						<img src="./assets/images/clients/client-4.jpg" alt="clients logo" class="clients__card__image user-select-none img-fluid">
 					</figure>
@@ -375,18 +385,18 @@
 				<div class="col-xl-6">
 					<h1 class="section-title secondary-color">Les <span class="primary-color">questions</span> courantes</h1>
 					<ul class="faq__list">
-						<li class="faq__list__item">
+						<li class="faq__list__item" data-aos="fade-up">
 							<h3 class="faq__list__item__title">➞ Où intervenez-vous ?</h3>
 							<p class="faq__list__item__text">Nous intervenons dans toute la France métropolitaine. Nos équipes sont réparties dans le pays pour une mise en oeuvre rapide et efficace</p>
 						</li>
-						<li class="faq__list__item">
+						<li class="faq__list__item" data-aos="fade-up" data-aos-delay="50">
 							<h3 class="faq__list__item__title">➞ L’isolation thermique est-elle à un 1 euro ?</h3>
-							<p class="faq__list__item__text">L'isolation à 1€ correspond à une appellation commerciale obsolète et n’a jamais concerné la méthode par l'extérieur. Pour plus d'informations, vous pouvez consulter notre <a href="#!" class="text-underline">article dédié à l'isolation à 1€.</a></p>
+							<p class="faq__list__item__text">L'isolation à 1€ correspond à une appellation commerciale obsolète et n’a jamais concerné la méthode par l'extérieur. Pour plus d'informations, vous pouvez consulter notre <a href="./blogs-details.html" class="text-underline">article dédié à l'isolation à 1€.</a></p>
 						</li>
-						<li class="faq__list__item">
+						<li class="faq__list__item" data-aos="fade-up" data-aos-delay="100">
 							<h3 class="faq__list__item__title">➞ À quelles aides ai-je droit ?</h3>
 							<p class="faq__list__item__text">Tous les propriétaires ont accès à MaPrimeRénov' et au Certificat d'Économies d'Énergie.</p>
-							<p class="faq__list__item__text">Vous pouvez consulter notre <a href="#!" class="text-underline">article sur les primes versées pour l'isolation des murs</a> pour en savoir plus.</p>
+							<p class="faq__list__item__text">Vous pouvez consulter notre <a href="./blogs-details.html" class="text-underline">article sur les primes versées pour l'isolation des murs</a> pour en savoir plus.</p>
 						</li>
 					</ul>
 				</div>
@@ -415,19 +425,19 @@
 						<h3 class="footer__block__title text-uppercase">GROUPE VERLAINE</h3>
 						<ul class="footer__block__list">
 							<li class="footer__block__list__item">
-								<a href="#!" class="footer__block__list__link d-block">Qui sommes-nous</a>
+								<a href="./about-us.html" class="footer__block__list__link d-block">Qui sommes-nous</a>
 							</li>
 							<li class="footer__block__list__item">
-								<a href="#!" class="footer__block__list__link d-block">Isolation par l'extérieur</a>
+								<a href="./activity.html" class="footer__block__list__link d-block">Isolation par l'extérieur</a>
 							</li>
 							<li class="footer__block__list__item">
-								<a href="#!" class="footer__block__list__link d-block">Quelques réalisations</a>
+								<a href="./achievements.html" class="footer__block__list__link d-block">Quelques réalisations</a>
 							</li>
 							<li class="footer__block__list__item">
-								<a href="#!" class="footer__block__list__link d-block">Blog</a>
+								<a href="./blogs.html" class="footer__block__list__link d-block">Blog</a>
 							</li>
 							<li class="footer__block__list__item">
-								<a href="#!" class="footer__block__list__link d-block">Contact</a>
+								<a href="./contact.html" class="footer__block__list__link d-block">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -476,15 +486,15 @@
 								<span class="footer__bottom__list__item__icon d-none d-md-inline-block px-2">-</span>
 							</li>
 							<li class="footer__bottom__list__item d-flex align-items-center">
-								<a href="#!" class="footer__bottom__list__link w-100">Mentions légales</a>
+								<a href="./legal-notices.html" class="footer__bottom__list__link w-100">Mentions légales</a>
 								<span class="footer__bottom__list__item__icon d-none d-md-inline-block px-2">-</span>
 							</li>
 							<li class="footer__bottom__list__item d-flex align-items-center">
-								<a href="#!" class="footer__bottom__list__link w-100">Politique de confidentialité</a>
+								<a href="./privacy-policy.html" class="footer__bottom__list__link w-100">Politique de confidentialité</a>
 								<span class="footer__bottom__list__item__icon d-none d-md-inline-block px-2">-</span>
 							</li>
 							<li class="footer__bottom__list__item">
-								<a href="#!" class="footer__bottom__list__link d-block">Conditions Générales de Vente</a>
+								<a href="./terms-and-conditions.html" class="footer__bottom__list__link d-block">Conditions Générales de Vente</a>
 							</li>
 						</ul>
 						<p class="footer__copyright text-center">© <span id="current-year">2022</span> AMG Façades - Groupe Verlaine</p>
@@ -505,6 +515,7 @@
 	<script src="./assets/plugins/fontawesome/js/all.min.js"></script>
 	<script src="./assets/plugins/slick-slider/js/slick.js"></script>
 	<script src="./assets/plugins/venobox/js/venobox.min.js"></script>
+	<script src="./assets/plugins/aos/js/aos.js"></script>
 	<script src="./assets/js/script.js"></script>
 </body>
 </html>

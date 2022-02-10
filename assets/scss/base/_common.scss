@@ -50,8 +50,18 @@ input:-webkit-autofill{
 	transition: background-color 5000s;
 }
 
-ul,
-ol {
+input{
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+	  -webkit-appearance: none;
+	  margin: 0;
+	}
+	&[type=number] {
+		-moz-appearance: textfield;
+	}
+}
+
+ul{
 	list-style: none;
 }
 
@@ -75,6 +85,10 @@ img{
 	@include min-desktop-lg{
 		max-width: 1330px;
 	}
+}
+
+.color-transparent{
+	color: transparent;
 }
 
 .primary-color{
@@ -241,6 +255,9 @@ img{
 			border-right-color: $color-primary !important;
 		}
 	}
+	&-figlio{
+		max-height: 100vh;
+	}
 	&-overlay{
 		background-color: rgba(23, 23, 23, 0.98) !important;
 	}
@@ -251,6 +268,9 @@ img{
 	top: 0;
 	left: 0;
 	z-index: 9999;
+	&__image{
+		max-height: toRem(100);
+	}
 }
 
 /* Common Section Gap Style */
@@ -282,10 +302,12 @@ img{
 	}
 }
 
+/* Common Link Underline Style */
 .text-underline{
 	text-decoration: underline;
 }
 
+/* Common Unorder List Style */
 .unordered-list{
 	list-style: initial;
 	padding-left: toRem(20);
@@ -295,6 +317,16 @@ img{
 	}
 }
 
+/* Common Order List Style */
+.order-list{
+	padding-left: toRem(20);
+	@include min-tablet{
+		font-size: toRem(18);
+		padding-left: toRem(40);
+	}
+}
+
+/* Choose Us Section Style */
 .choose-us{
 	color: $color-white;
 	&__title{

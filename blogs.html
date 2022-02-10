@@ -9,6 +9,18 @@
     <meta name="keywords" content="france,rénovation maison,rénovation de façade,plus-value immobilière,ravalement de façade,entreprise de ravalement,chantier,rénovation façade,rénovation énergétique,travaux,rénovation,façade,isolation,mur,maison,aide,ravalement,exterieur,extérieure,gain énergétique,ITE,isolation">
 	<!-- Site Title -->
 	<title>Blog de Groupe Verlaine - ITE</title>
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://groupeverlaine.com/">
+	<meta property="og:title" content="Groupe Verlaine - Isolation par l'extérieur">
+	<meta property="og:description" content="Entreprise spécialisée dans l'isolation thermique des murs par l'extérieur. Certifiés RGE, nous intervenons dans toute la France pour isoler et ravaler vos façades. ">
+	<meta property="og:image" content="./assets/images/og-image/og-image.png">
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://groupeverlaine.com/">
+	<meta property="twitter:title" content="Groupe Verlaine - Isolation par l'extérieur">
+	<meta property="twitter:description" content="Entreprise spécialisée dans l'isolation thermique des murs par l'extérieur. Certifiés RGE, nous intervenons dans toute la France pour isoler et ravaler vos façades. ">
+	<meta property="twitter:image" content="./assets/images/og-image/og-image.png">
 	<!-- Favicon Link -->
 	<link rel="icon" type="image/png" sizes="512x512" href="./assets/images/favicon/android-chrome-512x512.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="./assets/images/favicon/android-chrome-192x192.png">
@@ -19,9 +31,17 @@
 	<!-- All CSS -->
 	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./assets/plugins/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="./assets/plugins/aos/css/aos.css">
 	<link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 <body>
+	<!-- Preloader Section -->
+	<div class="preloader position-fixed bg-white w-100 h-100">
+		<div class="preloader__wrapper d-flex align-items-center justify-content-center w-100 h-100">
+			<img src="./assets/images/logos/logo.png" alt="logo" class="preloader__image user-select-none">
+		</div>
+	</div>
+
 	<!-- Header Section -->
 	<header class="header bg-white w-100">
 		<nav class="navbar navbar-expand-lg">
@@ -64,7 +84,7 @@
 					<h1 class="section-title section-title--lg font-weight-light secondary-color">Liste d'articles</h1>
 					<p>Pour mener à bien un projet d'isolation thermique extérieure, il est utile de bien connaitre le sujet. Consultez gratuitement des articles à propos de l'ITE en complément de la <a href="#!" class="secondary-color text-underline">page dédiée à ce sujet</a></p>
 				</div>
-				<div class="col-lg-4 col-md-6 mt-4">
+				<div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 					<article class="blogs__card">
 						<a href="./blogs-details.html" class="blogs__card__header d-block">
 							<img src="./assets/images/blogs/blog-1.jpg" alt="blog image" class="blogs__card__image w-100">
@@ -78,7 +98,7 @@
 						</div>
 					</article>
 				</div>
-				<div class="col-lg-4 col-md-6 mt-4">
+				<div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 					<article class="blogs__card">
 						<a href="./blogs-details.html" class="blogs__card__header d-block">
 							<img src="./assets/images/blogs/blog-2.jpg" alt="blog image" class="blogs__card__image w-100">
@@ -92,7 +112,7 @@
 						</div>
 					</article>
 				</div>
-				<div class="col-lg-4 col-md-6 mt-4">
+				<div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 					<article class="blogs__card">
 						<a href="./blogs-details.html" class="blogs__card__header d-block">
 							<img src="./assets/images/blogs/blog-3.jpg" alt="blog image" class="blogs__card__image w-100">
@@ -106,7 +126,7 @@
 						</div>
 					</article>
 				</div>
-				<div class="col-lg-4 col-md-6 mt-4">
+				<div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 					<article class="blogs__card">
 						<a href="./blogs-details.html" class="blogs__card__header d-block">
 							<img src="./assets/images/blogs/blog-4.jpeg" alt="blog image" class="blogs__card__image w-100">
@@ -120,7 +140,7 @@
 						</div>
 					</article>
 				</div>
-				<div class="col-lg-4 col-md-6 mt-4">
+				<div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 					<article class="blogs__card">
 						<a href="./blogs-details.html" class="blogs__card__header d-block">
 							<img src="./assets/images/blogs/blog-5.jpg" alt="blog image" class="blogs__card__image w-100">
@@ -134,7 +154,7 @@
 						</div>
 					</article>
 				</div>
-				<div class="col-lg-4 col-md-6 mt-4">
+				<div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 					<article class="blogs__card">
 						<a href="./blogs-details.html" class="blogs__card__header d-block">
 							<img src="./assets/images/blogs/blog-6.png" alt="blog image" class="blogs__card__image w-100">
@@ -161,19 +181,19 @@
 						<h3 class="footer__block__title text-uppercase">GROUPE VERLAINE</h3>
 						<ul class="footer__block__list">
 							<li class="footer__block__list__item">
-								<a href="#!" class="footer__block__list__link d-block">Qui sommes-nous</a>
+								<a href="./about-us.html" class="footer__block__list__link d-block">Qui sommes-nous</a>
 							</li>
 							<li class="footer__block__list__item">
-								<a href="#!" class="footer__block__list__link d-block">Isolation par l'extérieur</a>
+								<a href="./activity.html" class="footer__block__list__link d-block">Isolation par l'extérieur</a>
 							</li>
 							<li class="footer__block__list__item">
-								<a href="#!" class="footer__block__list__link d-block">Quelques réalisations</a>
+								<a href="./achievements.html" class="footer__block__list__link d-block">Quelques réalisations</a>
 							</li>
 							<li class="footer__block__list__item">
 								<a href="./blogs.html" class="footer__block__list__link d-block">Blog</a>
 							</li>
 							<li class="footer__block__list__item">
-								<a href="#!" class="footer__block__list__link d-block">Contact</a>
+								<a href="./contact.html" class="footer__block__list__link d-block">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -222,15 +242,15 @@
 								<span class="footer__bottom__list__item__icon d-none d-md-inline-block px-2">-</span>
 							</li>
 							<li class="footer__bottom__list__item d-flex align-items-center">
-								<a href="#!" class="footer__bottom__list__link w-100">Mentions légales</a>
+								<a href="./legal-notices.html" class="footer__bottom__list__link w-100">Mentions légales</a>
 								<span class="footer__bottom__list__item__icon d-none d-md-inline-block px-2">-</span>
 							</li>
 							<li class="footer__bottom__list__item d-flex align-items-center">
-								<a href="#!" class="footer__bottom__list__link w-100">Politique de confidentialité</a>
+								<a href="./privacy-policy.html" class="footer__bottom__list__link w-100">Politique de confidentialité</a>
 								<span class="footer__bottom__list__item__icon d-none d-md-inline-block px-2">-</span>
 							</li>
 							<li class="footer__bottom__list__item">
-								<a href="#!" class="footer__bottom__list__link d-block">Conditions Générales de Vente</a>
+								<a href="./terms-and-conditions.html" class="footer__bottom__list__link d-block">Conditions Générales de Vente</a>
 							</li>
 						</ul>
 						<p class="footer__copyright text-center">© <span id="current-year">2022</span> AMG Façades - Groupe Verlaine</p>
@@ -251,6 +271,7 @@
 	<script src="./assets/plugins/fontawesome/js/all.min.js"></script>
 	<script src="./assets/plugins/slick-slider/js/slick.js"></script>
 	<script src="./assets/plugins/venobox/js/venobox.min.js"></script>
+	<script src="./assets/plugins/aos/js/aos.js"></script>
 	<script src="./assets/js/script.js"></script>
 </body>
 </html>

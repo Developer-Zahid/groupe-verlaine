@@ -34,5 +34,14 @@
     }
     &__form{
         background-color: rgba($color-white, $alpha: 0.9);
+        .form{
+            &-title{
+                font-size: toRem(24);
+            }
+            &-text{
+                font-size: toRem(14);
+                font-weight: 500;
+            }
+        }
     }
 }

@@ -7,6 +7,14 @@
         font-size: toRem(16);
         font-weight: 500;
     }
+    &-control{
+        border-color: #b8bdc9;
+        text-shadow: none;
+        &::placeholder{
+            color: #8894ab;
+            font-weight: 300;
+        }
+    }
     &-required{
         vertical-align: super;
     }
@@ -19,10 +27,16 @@
         }
     }
 }
+
 .is-invalid ~ .invalid-feedback,
 .is-invalid ~ .invalid-tooltip,
 .was-validated :invalid ~ .invalid-feedback,
 .was-validated :invalid ~ .invalid-tooltip{
     display: inline-block;
     width: auto;
+}
+
+.real-estate__form{
+    border-left: 1px solid rgba(87,100,126,.21);
+    border-right: 1px solid rgba(87,100,126,.21);
 }

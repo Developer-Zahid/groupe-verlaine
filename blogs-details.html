@@ -9,6 +9,18 @@
     <meta name="keywords" content="france,rénovation maison,rénovation de façade,plus-value immobilière,ravalement de façade,entreprise de ravalement,chantier,rénovation façade,rénovation énergétique,travaux,rénovation,façade,isolation,mur,maison,aide,ravalement,exterieur,extérieure,gain énergétique,ITE,isolation">
 	<!-- Site Title -->
 	<title>Groupe Verlaine sur BFM TV</title>
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://groupeverlaine.com/">
+	<meta property="og:title" content="Groupe Verlaine - Isolation par l'extérieur">
+	<meta property="og:description" content="Entreprise spécialisée dans l'isolation thermique des murs par l'extérieur. Certifiés RGE, nous intervenons dans toute la France pour isoler et ravaler vos façades. ">
+	<meta property="og:image" content="./assets/images/og-image/og-image.png">
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://groupeverlaine.com/">
+	<meta property="twitter:title" content="Groupe Verlaine - Isolation par l'extérieur">
+	<meta property="twitter:description" content="Entreprise spécialisée dans l'isolation thermique des murs par l'extérieur. Certifiés RGE, nous intervenons dans toute la France pour isoler et ravaler vos façades. ">
+	<meta property="twitter:image" content="./assets/images/og-image/og-image.png">
 	<!-- Favicon Link -->
 	<link rel="icon" type="image/png" sizes="512x512" href="./assets/images/favicon/android-chrome-512x512.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="./assets/images/favicon/android-chrome-192x192.png">
@@ -23,6 +35,13 @@
 	<link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 <body>
+	<!-- Preloader Section -->
+	<div class="preloader position-fixed bg-white w-100 h-100">
+		<div class="preloader__wrapper d-flex align-items-center justify-content-center w-100 h-100">
+			<img src="./assets/images/logos/logo.png" alt="logo" class="preloader__image user-select-none">
+		</div>
+	</div>
+
 	<!-- Header Section -->
 	<header class="header bg-white w-100">
 		<nav class="navbar navbar-expand-lg">
@@ -163,19 +182,19 @@
 						<h3 class="footer__block__title text-uppercase">GROUPE VERLAINE</h3>
 						<ul class="footer__block__list">
 							<li class="footer__block__list__item">
-								<a href="#!" class="footer__block__list__link d-block">Qui sommes-nous</a>
+								<a href="./about-us.html" class="footer__block__list__link d-block">Qui sommes-nous</a>
 							</li>
 							<li class="footer__block__list__item">
-								<a href="#!" class="footer__block__list__link d-block">Isolation par l'extérieur</a>
+								<a href="./activity.html" class="footer__block__list__link d-block">Isolation par l'extérieur</a>
 							</li>
 							<li class="footer__block__list__item">
-								<a href="#!" class="footer__block__list__link d-block">Quelques réalisations</a>
+								<a href="./achievements.html" class="footer__block__list__link d-block">Quelques réalisations</a>
 							</li>
 							<li class="footer__block__list__item">
 								<a href="./blogs.html" class="footer__block__list__link d-block">Blog</a>
 							</li>
 							<li class="footer__block__list__item">
-								<a href="#!" class="footer__block__list__link d-block">Contact</a>
+								<a href="./contact.html" class="footer__block__list__link d-block">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -224,15 +243,15 @@
 								<span class="footer__bottom__list__item__icon d-none d-md-inline-block px-2">-</span>
 							</li>
 							<li class="footer__bottom__list__item d-flex align-items-center">
-								<a href="#!" class="footer__bottom__list__link w-100">Mentions légales</a>
+								<a href="./legal-notices.html" class="footer__bottom__list__link w-100">Mentions légales</a>
 								<span class="footer__bottom__list__item__icon d-none d-md-inline-block px-2">-</span>
 							</li>
 							<li class="footer__bottom__list__item d-flex align-items-center">
-								<a href="#!" class="footer__bottom__list__link w-100">Politique de confidentialité</a>
+								<a href="./privacy-policy.html" class="footer__bottom__list__link w-100">Politique de confidentialité</a>
 								<span class="footer__bottom__list__item__icon d-none d-md-inline-block px-2">-</span>
 							</li>
 							<li class="footer__bottom__list__item">
-								<a href="#!" class="footer__bottom__list__link d-block">Conditions Générales de Vente</a>
+								<a href="./terms-and-conditions.html" class="footer__bottom__list__link d-block">Conditions Générales de Vente</a>
 							</li>
 						</ul>
 						<p class="footer__copyright text-center">© <span id="current-year">2022</span> AMG Façades - Groupe Verlaine</p>
@@ -253,6 +272,7 @@
 	<script src="./assets/plugins/fontawesome/js/all.min.js"></script>
 	<script src="./assets/plugins/slick-slider/js/slick.js"></script>
 	<script src="./assets/plugins/venobox/js/venobox.min.js"></script>
+	<script src="./assets/plugins/aos/js/aos.js"></script>
 	<script src="./assets/js/script.js"></script>
 </body>
 </html>

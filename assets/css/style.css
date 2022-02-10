@@ -119,8 +119,16 @@ input:-webkit-autofill {
   transition: background-color 5000s;
 }
 
-ul,
-ol {
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+ul {
   list-style: none;
 }
 
@@ -146,6 +154,10 @@ img {
   .container {
     max-width: 1330px;
   }
+}
+
+.color-transparent {
+  color: transparent;
 }
 
 .primary-color {
@@ -310,6 +322,10 @@ img {
   border-right-color: #e12523 !important;
 }
 
+.vbox-figlio {
+  max-height: 100vh;
+}
+
 .vbox-overlay {
   background-color: rgba(23, 23, 23, 0.98) !important;
 }
@@ -319,6 +335,10 @@ img {
   top: 0;
   left: 0;
   z-index: 9999;
+}
+
+.preloader__image {
+  max-height: 6.25rem;
 }
 
 /* Common Section Gap Style */
@@ -361,10 +381,12 @@ img {
   }
 }
 
+/* Common Link Underline Style */
 .text-underline {
   text-decoration: underline;
 }
 
+/* Common Unorder List Style */
 .unordered-list {
   list-style: initial;
   padding-left: 1.25rem;
@@ -377,6 +399,19 @@ img {
   }
 }
 
+/* Common Order List Style */
+.order-list {
+  padding-left: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .order-list {
+    font-size: 1.125rem;
+    padding-left: 2.5rem;
+  }
+}
+
+/* Choose Us Section Style */
 .choose-us {
   color: #ffffff;
 }
@@ -465,6 +500,41 @@ img {
   font-weight: 500;
 }
 
+.form-control {
+  border-color: #b8bdc9;
+  text-shadow: none;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #8894ab;
+  font-weight: 300;
+}
+
+.form-control:-moz-placeholder {
+  color: #8894ab;
+  font-weight: 300;
+}
+
+.form-control::-moz-placeholder {
+  color: #8894ab;
+  font-weight: 300;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #8894ab;
+  font-weight: 300;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #8894ab;
+  font-weight: 300;
+}
+
+.form-control::placeholder {
+  color: #8894ab;
+  font-weight: 300;
+}
+
 .form-required {
   vertical-align: super;
 }
@@ -485,6 +555,11 @@ img {
 .was-validated :invalid ~ .invalid-tooltip {
   display: inline-block;
   width: auto;
+}
+
+.real-estate__form {
+  border-left: 1px solid rgba(87, 100, 126, 0.21);
+  border-right: 1px solid rgba(87, 100, 126, 0.21);
 }
 
 /* Header Section Style */
@@ -832,6 +907,15 @@ img {
 
 .banner__form {
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.banner__form .form-title {
+  font-size: 1.5rem;
+}
+
+.banner__form .form-text {
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 /* Sub-Banner Section Style */
